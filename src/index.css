@@ -1,11 +1,5 @@
 body {
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-    font-family: "Montserrat", system-ui;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: "Montserrat", system-ui;
+  background-color: #1a1d33;
 }
