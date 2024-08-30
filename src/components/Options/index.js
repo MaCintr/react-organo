@@ -59,6 +59,7 @@ const StyledWrapper = styled.div`
   .formField select:focus + span,
   .formField select:valid + span {
     transform: translateY(-32px) translateX(-5px) scale(0.95);
+    color: white;
     transition: 0.3s ease-in-out;
   }
 `;

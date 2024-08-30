@@ -1,10 +1,11 @@
 .container {
-    margin: 80px 0;
-    background-color: #9102d4;
+    margin: 60px 0;
+    background-color: #1a1d33;
     padding: 20px;
     /* border: 2px solid white; */
     border-radius: 20px;
-    box-shadow: 0px 10px 20px #101220;
+    border: 2px solid #9102d4;
+    box-shadow: 0px 10px 20px ;
 }
 
 .main {
