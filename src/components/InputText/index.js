@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const Input = () => {
+const Input = (props) => {
   return (
     <StyledWrapper>
       <form className="formField">
         <input required type="text" />
-        <span>Placeholder</span>
+        <span>{props.label}</span>
       </form>
     </StyledWrapper>
   );
@@ -16,6 +16,7 @@ const StyledWrapper = styled.div`
   .formField {
   margin: 10px;
   position: relative;
+  margin: 50px;
 }
 
 .formField input {
@@ -26,14 +27,15 @@ const StyledWrapper = styled.div`
   background-color: #ffffff;
   color: #333;
   font-size: 16px;
-  font-weight: 550;
+  font-weight: 400;
   transition: 0.3s ease-in-out;
   box-shadow: 0 0 0 5px transparent;
+  width: 100%
 }
 
 .formField input:hover,
 .formField input:focus {
-  box-shadow: 0 0 0 2px #9102D4;
+  box-shadow: 0 0 0 2px #1a1d33;
 }
 
 .formField span {
@@ -41,7 +43,7 @@ const StyledWrapper = styled.div`
   left: 0;
   top: 0;
   padding: 8px 15px;
-  color: #9102d4;
+  color: #1a1d33;
   font-size: 16px;
   font-weight: 600;
   transition: 0.3s ease-in-out;

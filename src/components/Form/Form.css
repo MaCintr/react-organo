@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    flex: column;
+    justify-content: center;
+    background-color: #9102d4;
+}
+
+h2 {
+    color: #1a1d33;
+}
