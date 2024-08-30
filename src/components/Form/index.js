@@ -3,16 +3,29 @@ import Options from "../Options"
 import Input from "../InputText"
 
 const Form = () => {
+
+    const times = [
+        'Programação',
+        'Front-End',
+        'Data Science',
+        'Devops',
+        'UX & Design',
+        'Mobile',
+        'Inovação e Gestão'
+    ]
+
     return (
-        <section className="container">
-            <form className="form">
-                <h2>Preencha os dados para criar o Card do Colaborador</h2>
-                <Input label="Nome" />
-                <Options label="Cargo" />
-                <Input label="Endereço da Imagem" />
-                <Options label="Time" />
-            </form>
-        </section>
+        <div className="main">
+            <section className="container">
+                <form className="form">
+                    <h2>Preencha os dados para criar o Card do Colaborador</h2>
+                    <Input label="Nome" />
+                    <Input label="Endereço" />
+                    <Input label="Endereço da Imagem" />
+                    <Options label="Time" itens={times} />
+                </form>
+            </section>
+        </div>
     )
 }
 

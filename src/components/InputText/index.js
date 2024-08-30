@@ -30,7 +30,7 @@ const StyledWrapper = styled.div`
   font-weight: 400;
   transition: 0.3s ease-in-out;
   box-shadow: 0 0 0 5px transparent;
-  width: 100%
+  width: 94.5%
 }
 
 .formField input:hover,

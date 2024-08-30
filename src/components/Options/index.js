@@ -6,9 +6,11 @@ const Options = (props) => {
       <form className="formField">
         <select required>
           <option value="" disabled selected hidden></option>
-          <option value="option1">Programador</option>
-          <option value="option2">Gestor</option>
-          <option value="option3">Designer</option>
+          {
+            props.itens.map(option => 
+              <option key={option} value={option}>{option}</option>
+            )
+          }
         </select>
         <span>{props.label}</span>
       </form>
@@ -34,8 +36,7 @@ const StyledWrapper = styled.div`
     font-weight: 500;
     transition: 0.3s ease-in-out;
     box-shadow: 0 0 0 5px transparent;
-    width: 105%;
-    appearance: none; /* Remove a seta padrão do select */
+    width: 100%;
   }
 
   .formField select:hover,
