@@ -1,11 +1,19 @@
 import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 
 const Input = (props) => {
+
+  const [valor, setValor] = useState('')
+
+  const onTypeText = (event) => {
+    props.onChangeValue(event.target.value)
+  }
+
   return (
     <StyledWrapper>
       <div className="formField">
-        <input required type="text" />
+        <input value={props.valor} required type="text" onChange={onTypeText}/>
         <span>{props.label}</span>
       </div>
     </StyledWrapper>
