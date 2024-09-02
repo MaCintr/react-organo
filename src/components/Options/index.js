@@ -41,7 +41,7 @@ const StyledWrapper = styled.div`
 
   .formField select:hover,
   .formField select:focus {
-    box-shadow: 0 0 0 2px #1a1d33;
+    box-shadow: 0 0 0 2px #9102d4;
   }
 
   .formField span {
