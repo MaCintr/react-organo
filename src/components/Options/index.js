@@ -4,7 +4,7 @@ const Options = (props) => {
   return (
     <StyledWrapper>
       <div className="formField">
-        <select required>
+        <select onChange={event => props.onChangeValue(event.target.value)} required value={props.value}>
           <option value={props.label} disabled selected hidden></option>
           {
             props.itens.map(option => 
