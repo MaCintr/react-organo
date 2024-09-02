@@ -1,6 +1,7 @@
 import "./Form.css"
 import Options from "../Options"
 import Input from "../InputText"
+import ButtonElement from "../ButtonElement"
 
 const Form = () => {
 
@@ -23,6 +24,7 @@ const Form = () => {
                     <Input label="Endereço" />
                     <Input label="Endereço da Imagem" />
                     <Options label="Time" itens={times} />
+                    <ButtonElement label="Criar Card"/>
                 </form>
             </section>
         </div>
