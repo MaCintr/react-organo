@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Banner from './components/Banner';
 import Form from './components/Form';
+import TeamContainer from './components/TeamContainer';
 
 function App() {
 
@@ -10,13 +11,17 @@ function App() {
   const onNewColaborator = (colaborador) => {
     console.log(colaborador)
     setColaboradores([...colaboradores, colaborador])
-    
+
   }
 
   return (
-    <div>
-      <Banner/>
-      <Form onSubmitedColaborator={colaborador => onNewColaborator(colaborador)}/>
+    <div className='main'>
+      <Banner />
+      <Form onSubmitedColaborator={colaborador => onNewColaborator(colaborador)} />
+        <h1>Minha Organização</h1>
+      <TeamContainer nome="Programação" />
+      <TeamContainer nome="Front-end" />
+      <TeamContainer nome="Data Science" />
     </div>
   );
 }

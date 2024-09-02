@@ -1,0 +1,10 @@
+.container-team {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #9102d4;
+}
+
+h3 {
+    color: white;
+}
