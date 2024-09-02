@@ -3,9 +3,9 @@ import styled from "styled-components";
 const Options = (props) => {
   return (
     <StyledWrapper>
-      <form className="formField">
+      <div className="formField">
         <select required>
-          <option value="" disabled selected hidden></option>
+          <option value={props.label} disabled selected hidden></option>
           {
             props.itens.map(option => 
               <option key={option} value={option}>{option}</option>
@@ -13,7 +13,7 @@ const Options = (props) => {
           }
         </select>
         <span>{props.label}</span>
-      </form>
+      </div>
     </StyledWrapper>
   );
 };
@@ -41,7 +41,7 @@ const StyledWrapper = styled.div`
 
   .formField select:hover,
   .formField select:focus {
-    box-shadow: 0 0 0 2px #9102d4;
+    box-shadow: 0 0 0 2px #9102d4div;
   }
 
   .formField span {

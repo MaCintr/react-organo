@@ -4,10 +4,10 @@ import styled from "styled-components";
 const Input = (props) => {
   return (
     <StyledWrapper>
-      <form className="formField">
+      <div className="formField">
         <input required type="text" />
         <span>{props.label}</span>
-      </form>
+      </div>
     </StyledWrapper>
   );
 };

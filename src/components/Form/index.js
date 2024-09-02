@@ -15,16 +15,23 @@ const Form = () => {
         'Inovação e Gestão'
     ]
 
+
+    const onSave = (event) => {
+        event.preventDefault()
+        console.log('Formulário Submetido')
+    }
+
+
     return (
         <div className="main">
             <section className="container">
-                <form className="form">
+                <form className="form" onSubmit={onSave}>
                     <h2>Preencha os dados para criar o Card do Colaborador</h2>
                     <Input label="Nome" />
-                    <Input label="Endereço" />
+                    <Input label="Cargo" />
                     <Input label="Endereço da Imagem" />
                     <Options label="Time" itens={times} />
-                    <ButtonElement label="Criar Card"/>
+                    <ButtonElement>Criar Card</ButtonElement>
                 </form>
             </section>
         </div>
