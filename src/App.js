@@ -48,7 +48,7 @@ function App() {
   return (
     <div className='main'>
       <Banner />
-      <Form onSubmitedColaborator={colaborador => onNewColaborator(colaborador)} />
+      <Form times={times.map(time => time.nome)} onSubmitedColaborator={colaborador => onNewColaborator(colaborador)} />
       <h1 className='org'>Minha Organização</h1>
       {times.map(time => <TeamContainer key={time.nome} nome={time.nome} icon={time.svg}/>)}
     </div>

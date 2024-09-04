@@ -1,0 +1,29 @@
+.colaborator {
+    border: 2px solid #6d00a0;
+    width: max-content;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px #6d00a0;
+    margin: 10px 10px 0 10px;
+    background-color: #1a1d33;
+}
+
+.header img {
+    border-radius: 50%;
+    width: 150px;
+    margin: 10px 20px 0 20px;
+}
+
+.header {
+    background-color: #6d00a0;
+    height: 50px;
+}
+
+.base {
+    color: white;
+    padding-top: 90px;
+    padding-bottom: 40px;
+}
+
+.base h5 {
+    font-weight: 400;
+}

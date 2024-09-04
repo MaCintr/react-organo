@@ -11,17 +11,6 @@ const Form = (props) => {
     const [img, setImg] = useState('')
     const [time, setTime] = useState('')
 
-    const times = [
-        'Programação',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'UX & Design',
-        'Mobile',
-        'Inovação e Gestão'
-    ]
-
-
     const onSave = (event) => {
         event.preventDefault()
         console.log('Formulário Submetido:')
@@ -48,7 +37,7 @@ const Form = (props) => {
                     <Input label="Nome" valor={nome} onChangeValue={valor => setNome(valor)} />
                     <Input label="Cargo" valor={cargo} onChangeValue={valor => setCargo(valor)} />
                     <Input label="Imagem (Cole o endereço da imagem)" valor={img} onChangeValue={valor => setImg(valor)} />
-                    <Options label="Time" valor={time} onChangeValue={valor => setTime(valor)} itens={times} />
+                    <Options label="Time" valor={time} onChangeValue={valor => setTime(valor)} itens={props.times} />
                     <ButtonElement>
                         Criar Card
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="add-icon" viewBox="0 0 16 16">
