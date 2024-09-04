@@ -3,7 +3,9 @@ import "./TeamContainer.css"
 const TeamContainer = (props) => {
     return (
         <section className="container-team">
-            <h3>{props.nome}</h3>
+            <div className="nome-time">
+            <i class={props.icon}></i><h1>{props.nome}</h1>
+            </div>
         </section>
     )
 }

@@ -40,7 +40,7 @@ const Form = (props) => {
 
 
     return (
-        <div className="main">
+        <div className="main-form">
             <h1>Formulário do Colaborador</h1>
             <section className="container">
                 <form className="form" onSubmit={onSave}>
