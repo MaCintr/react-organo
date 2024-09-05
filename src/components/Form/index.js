@@ -3,6 +3,7 @@ import Options from "../Options"
 import Input from "../InputText"
 import ButtonElement from "../ButtonElement"
 import { useState } from "react"
+import SelectColor from "../SelectColor"
 
 const Form = (props) => {
 
@@ -10,20 +11,30 @@ const Form = (props) => {
     const [cargo, setCargo] = useState('')
     const [img, setImg] = useState('')
     const [time, setTime] = useState('')
+    const [cor, setCor] = useState('')
+
+    const colorOptions = ['#a60eec', '#ff0000', '#33FF57', '#3357FF', '#ffff00', '#808080', '#FF33A1', '#33FFF7', '#8D33FF', '#ffa500'];
 
     const onSave = (event) => {
         event.preventDefault()
-        console.log('Formulário Submetido:')
-        console.log('Nome => ', nome)
-        console.log('Cargo => ', cargo)
-        console.log('Endereco da img => ', img)
-        console.log('Time => ', time)
-        props.onSubmitedColaborator({
-            nome,
-            cargo,
-            img,
-            time
-        })
+        console.log(cor)
+        if (cor != '') {
+            console.log('Formulário Submetido:')
+            console.log('Nome => ', nome)
+            console.log('Cargo => ', cargo)
+            console.log('Endereco da img => ', img)
+            console.log('Time => ', time)
+            console.log('Cor => ', cor)
+            props.onSubmitedColaborator({
+                nome,
+                cargo,
+                img,
+                time,
+                cor
+            })
+        } else {
+            window.alert('Selecione a cor do Card')
+        }
 
     }
 
@@ -38,6 +49,7 @@ const Form = (props) => {
                     <Input label="Cargo" valor={cargo} onChangeValue={valor => setCargo(valor)} />
                     <Input label="Imagem (Cole o endereço da imagem)" valor={img} onChangeValue={valor => setImg(valor)} />
                     <Options label="Time" valor={time} onChangeValue={valor => setTime(valor)} itens={props.times} />
+                    <SelectColor colors={colorOptions} valor={cor} onChangeValue={valor => setCor(valor)} />
                     <ButtonElement>
                         Criar Card
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="add-icon" viewBox="0 0 16 16">

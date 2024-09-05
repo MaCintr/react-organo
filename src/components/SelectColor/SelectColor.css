@@ -1,0 +1,17 @@
+.color-selector {
+    transform: translateY(-40px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.color-selector h3 {
+    color: white;
+}
+
+.colors {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
