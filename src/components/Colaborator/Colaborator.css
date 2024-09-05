@@ -1,6 +1,6 @@
 .colaborator {
-    border: 2px solid #a60eec;
-    width: max-content;
+    width: 220px;
+    border: 2px solid;
     border-radius: 20px;
     box-shadow: 10px 10px 10px #6d00a0;
     margin: 10px 10px 0 10px;
@@ -14,7 +14,7 @@
 }
 
 .header {
-    background-color: #a60eec;
+    /* background-color: #a60eec; */
     height: 70px;
     border-radius: 15px 15px 0 0;
 }

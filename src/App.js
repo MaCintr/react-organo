@@ -50,7 +50,14 @@ function App() {
       <Banner />
       <Form times={times.map(time => time.nome)} onSubmitedColaborator={colaborador => onNewColaborator(colaborador)} />
       <h1 className='org'>Minha Organização</h1>
-      {times.map(time => <TeamContainer key={time.nome} nome={time.nome} icon={time.svg}/>)}
+      {times.map(time => <TeamContainer
+        key={time.nome}
+        nome={time.nome}
+        icon={time.svg}
+        colaboradores={colaboradores.filter(colaborador =>
+          colaborador.time == time.nome
+        )}
+      />)}
     </div>
   );
 }
