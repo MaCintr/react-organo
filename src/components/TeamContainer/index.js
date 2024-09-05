@@ -3,7 +3,7 @@ import "./TeamContainer.css"
 
 const TeamContainer = (props) => {
     return (
-        <section className="container-team">
+        props.colaboradores.length > 0 && <section className="container-team">
             <div className="nome-time">
                 <i class={props.icon}></i><h1>{props.nome}</h1>
             </div>
