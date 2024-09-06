@@ -6,7 +6,7 @@ const SelectColor = (props) => {
 
   const handleColorClick = (color) => {
     setSelectedColor(color);
-    props.onChangeValue(color); // Passa a cor selecionada para o pai
+    props.onChangeValue(color);
   };
 
   return (
@@ -14,7 +14,7 @@ const SelectColor = (props) => {
       <h3>Cor do Card</h3>
       <div className="colors">
         {props.colors.map((color) => (
-          <div
+          <div className="quadrante-cor"
             key={color}
             onClick={() => handleColorClick(color)}
             style={{

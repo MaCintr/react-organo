@@ -50,6 +50,15 @@ const Form = (props) => {
             setTime('')
             setCor('')
 
+            const cores = document.querySelectorAll('.quadrante-cor');
+
+            cores.forEach(cor => {
+                cor.style.height = '30px';
+                cor.style.width = '30px';
+                cor.style.border = 'none';
+            });
+            
+
             setShowWarning(true);
         } else {
             window.alert('Selecione a cor do Card');

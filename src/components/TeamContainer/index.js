@@ -8,7 +8,7 @@ const TeamContainer = (props) => {
                 <i class={props.icon}></i><h1>{props.nome}</h1>
             </div>
             <div className="colab-list">
-                {props.colaboradores.map(colaborador => <Colaborator nome={colaborador.nome} cargo={colaborador.cargo} img={colaborador.img} cor={colaborador.cor} />)}
+                {props.colaboradores.map(colaborador => <Colaborator key={colaborador.nome} nome={colaborador.nome} cargo={colaborador.cargo} img={colaborador.img} cor={colaborador.cor} />)}
             </div>
         </section>
     )
