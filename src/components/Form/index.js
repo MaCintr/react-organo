@@ -1,30 +1,41 @@
-import "./Form.css"
-import Options from "../Options"
-import Input from "../InputText"
-import ButtonElement from "../ButtonElement"
-import { useState } from "react"
-import SelectColor from "../SelectColor"
+import { useState, useEffect } from "react";
+import "./Form.css";
+import Options from "../Options";
+import Input from "../InputText";
+import ButtonElement from "../ButtonElement";
+import SelectColor from "../SelectColor";
 
 const Form = (props) => {
-
-    const [nome, setNome] = useState('')
-    const [cargo, setCargo] = useState('')
-    const [img, setImg] = useState('')
-    const [time, setTime] = useState('')
-    const [cor, setCor] = useState('')
+    const [nome, setNome] = useState('');
+    const [cargo, setCargo] = useState('');
+    const [img, setImg] = useState('');
+    const [time, setTime] = useState('');
+    const [cor, setCor] = useState('');
+    const [showWarning, setShowWarning] = useState(false);
 
     const colorOptions = ['#a60eec', '#ff0000', '#33FF57', '#3357FF', '#ffff00', '#808080', '#FF33A1', '#33FFF7', '#8D33FF', '#ffa500'];
 
+    useEffect(() => {
+        if (showWarning) {
+            const timer = setTimeout(() => {
+                setShowWarning(false);
+            }, 5000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [showWarning]);
+
     const onSave = (event) => {
-        event.preventDefault()
-        console.log(cor)
-        if (cor != '') {
-            console.log('Formulário Submetido:')
-            console.log('Nome => ', nome)
-            console.log('Cargo => ', cargo)
-            console.log('Endereco da img => ', img)
-            console.log('Time => ', time)
-            console.log('Cor => ', cor)
+        event.preventDefault();
+
+        if (cor !== '') {
+            console.log('Formulário Submetido:');
+            console.log('Nome => ', nome);
+            console.log('Cargo => ', cargo);
+            console.log('Endereco da img => ', img);
+            console.log('Time => ', time);
+            console.log('Cor => ', cor);
+            
             props.onSubmitedColaborator({
                 nome,
                 cargo,
@@ -32,16 +43,23 @@ const Form = (props) => {
                 time,
                 cor
             })
+
+            setNome('')
+            setCargo('')
+            setImg('')
+            setTime('')
+            setCor('')
+
+            setShowWarning(true);
         } else {
-            window.alert('Selecione a cor do Card')
+            window.alert('Selecione a cor do Card');
         }
-
-    }
-
+    };
 
     return (
         <div className="main-form">
             <h1>Formulário do Colaborador</h1>
+            {showWarning && <div className="warning"><i class="bi bi-check-circle-fill check"></i>Novo card criado com sucesso!</div>}
             <section className="container">
                 <form className="form" onSubmit={onSave}>
                     <h2>Preencha os dados para criar o Card do Colaborador:</h2>
@@ -52,14 +70,12 @@ const Form = (props) => {
                     <SelectColor colors={colorOptions} valor={cor} onChangeValue={valor => setCor(valor)} />
                     <ButtonElement>
                         Criar Card
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" className="add-icon" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4" />
-                        </svg></ButtonElement>
+                        <i class="bi bi-plus-circle criar"></i>
+                    </ButtonElement>
                 </form>
             </section>
         </div>
-    )
-}
+    );
+};
 
-export default Form
+export default Form;

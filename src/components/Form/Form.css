@@ -26,3 +26,48 @@ h2,h1 {
 .add-icon {
     margin-left: 5px;
 }
+
+.criar {
+    color: #9102d4;
+    margin-left: 5px;
+    font-size: 22px;
+}
+
+.warning {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    z-index: 1000;
+    animation: fade-in-out 5s ease-in-out forwards;
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.check {
+    margin-right: 10px;
+}
