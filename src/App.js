@@ -56,7 +56,7 @@ function App() {
           nome={time.nome}
           icon={time.svg}
           colaboradores={colaboradores.filter(colaborador =>
-            colaborador.time == time.nome
+            colaborador.time === time.nome
           )}
         />)}
     </div>

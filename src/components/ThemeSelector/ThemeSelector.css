@@ -1,0 +1,20 @@
+.radio-group {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 40px;
+}
+
+.radio-group h4 {
+    color: white;
+    font-size: 25px;
+}
+
+.radio-group .nome-tema {
+    color: white;
+}
