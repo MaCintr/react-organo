@@ -1,45 +1,12 @@
-[data-contexto='roxo'] {
-  --main-bg-color: #1a1d33
-}
-[data-contexto='azul'] {
-  --main-bg-color: #1a1d33
-}
-[data-contexto='verde'] {
-  --main-bg-color: #1a1d33
-}
-[data-contexto='vermelho'] {
-  --main-bg-color: #1a1d33
-}
-[data-contexto='laranja'] {
-  --main-bg-color: #1a1d33
-}
-[data-contexto='claro'] {
-  --main-bg-color: white
-}
-
-[banner-bg='roxo'] {
-  --banner-bg-color: #101220
-}
-[banner-bg='azul'] {
-  --banner-bg-color: #101220
-}
-[banner-bg='verde'] {
-  --banner-bg-color: #101220
-}
-[banner-bg='vermelho'] {
-  --banner-bg-color: #101220
-}
-[banner-bg='laranja'] {
-  --banner-bg-color: #101220
-}
-[banner-bg='claro'] {
-  --banner-bg-color: #bfbfbf
-}
-
 html {
   margin: 0;
   font-family: "Montserrat", system-ui;
   background-color: var(--main-bg-color);
+}
+
+.main {
+  margin: 0;
+  width: 100%;
 }
 
 .banner {

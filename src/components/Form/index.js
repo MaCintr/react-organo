@@ -35,7 +35,7 @@ const Form = (props) => {
             console.log('Endereco da img => ', img);
             console.log('Time => ', time);
             console.log('Cor => ', cor);
-            
+
             props.onSubmitedColaborator({
                 nome,
                 cargo,
@@ -57,7 +57,7 @@ const Form = (props) => {
                 cor.style.width = '30px';
                 cor.style.border = 'none';
             });
-            
+
 
             setShowWarning(true);
         } else {
@@ -69,7 +69,7 @@ const Form = (props) => {
         <div className="main-form">
             <h1>Formulário do Colaborador</h1>
             {showWarning && <div className="warning"><i class="bi bi-check-circle-fill check"></i>Novo card criado com sucesso!</div>}
-            <section className="container">
+            <section className="container-form">
                 <form className="form" onSubmit={onSave}>
                     <h2>Preencha os dados para criar o Card do Colaborador:</h2>
                     <Input label="Nome" valor={nome} onChangeValue={valor => setNome(valor)} />
@@ -79,7 +79,6 @@ const Form = (props) => {
                     <SelectColor colors={colorOptions} valor={cor} onChangeValue={valor => setCor(valor)} />
                     <ButtonElement>
                         Criar Card
-                        <i class="bi bi-plus-circle criar"></i>
                     </ButtonElement>
                 </form>
             </section>
