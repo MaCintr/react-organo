@@ -1,7 +1,13 @@
 import Colaborator from "../Colaborator"
 import "./TeamContainer.css"
+import temaState from "../ThemeSelector"
 
 const TeamContainer = (props) => {
+
+    function selectColor(temaState) {
+
+    }
+
     return (
         props.colaboradores.length > 0 && <section className="container-team">
             <div className="nome-time">

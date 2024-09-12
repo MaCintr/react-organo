@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './ThemeSelector.css'
 
 const ThemeSelector = (props) => {
@@ -22,7 +22,7 @@ const ThemeSelector = (props) => {
                 bannerHeader.style.backgroundColor = '#bfbfbf'
                 bannerHeader.style.boxShadow = '0px 5px 10px #bfbfbf'
             }
-            
+
             form.style.borderColor = mainColor
             botao.style.borderColor = mainColor
             botao.style.color = mainColor
@@ -78,6 +78,10 @@ const ThemeSelector = (props) => {
             secondColor: '#545454',
         },
     ]
+
+    useEffect(() => {
+        alterarContexto('roxo', '#a60eec', '#a60eec');
+    }, []);
 
     return (
         <div className="radio-group">
