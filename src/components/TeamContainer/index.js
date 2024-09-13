@@ -1,7 +1,7 @@
 import Colaborator from "../Colaborator";
 import "./TeamContainer.css";
 
-const TeamContainer = ({ temaState, secondTemaState, colaboradores, nome, icon }) => {
+const TeamContainer = ({ temaState, secondTemaState, colaboradores, nome, icon, onDeleteColaborator }) => {
   return (
     colaboradores.length > 0 && (
       <section
@@ -23,6 +23,7 @@ const TeamContainer = ({ temaState, secondTemaState, colaboradores, nome, icon }
               cargo={colaborador.cargo}
               img={colaborador.img}
               cor={colaborador.cor}
+              onDelete={() => onDeleteColaborator(colaborador.nome)}
             />
           ))}
         </div>

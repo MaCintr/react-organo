@@ -15,7 +15,10 @@ function App() {
   const onNewColaborator = (colaborador) => {
     console.log(colaborador)
     setColaboradores([...colaboradores, colaborador])
+  }
 
+  const onDeleteColaborator = (nomeColaborador) => {
+    setColaboradores(colaboradores.filter(colaborador => colaborador.nome !== nomeColaborador))
   }
 
   const alterarContextoGlobal = (mainColor, secondColor) => {
@@ -70,6 +73,7 @@ function App() {
           colaboradores={colaboradores.filter(colaborador =>
             colaborador.time === time.nome
           )}
+          onDeleteColaborator={onDeleteColaborator}
         />)}
     </div>
   );
