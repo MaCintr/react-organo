@@ -72,10 +72,10 @@ const Form = (props) => {
             <section className="container-form">
                 <form className="form" onSubmit={onSave}>
                     <h2>Preencha os dados para criar o Card do Colaborador:</h2>
-                    <Input label="Nome" valor={nome} onChangeValue={valor => setNome(valor)} />
-                    <Input label="Cargo" valor={cargo} onChangeValue={valor => setCargo(valor)} />
-                    <Input label="Username do Github" valor={img} onChangeValue={valor => setImg(valor)} />
-                    <Options label="Time" valor={time} onChangeValue={valor => setTime(valor)} itens={props.times} />
+                    <Input temaState={props.temaState} label="Nome" valor={nome} onChangeValue={valor => setNome(valor)} />
+                    <Input temaState={props.temaState} label="Cargo" valor={cargo} onChangeValue={valor => setCargo(valor)} />
+                    <Input temaState={props.temaState} label="Username do Github" valor={img} onChangeValue={valor => setImg(valor)} />
+                    <Options temaState={props.temaState} label="Time" valor={time} onChangeValue={valor => setTime(valor)} itens={props.times} />
                     <SelectColor colors={colorOptions} valor={cor} onChangeValue={valor => setCor(valor)} />
                     <ButtonElement>
                         Criar Card

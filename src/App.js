@@ -64,7 +64,7 @@ function App() {
     <div className='main'>
       <Banner />
       <ThemeSelector alterarContextoGlobal={alterarContextoGlobal}/>
-      <Form times={times.map(time => time.nome)} onSubmitedColaborator={colaborador => onNewColaborator(colaborador)} />
+      <Form temaState={temaState} times={times.map(time => time.nome)} onSubmitedColaborator={colaborador => onNewColaborator(colaborador)} />
       <h1 className='org'>Minha Organização</h1>
       {times.map(time =>
         <TeamContainer
