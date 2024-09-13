@@ -67,7 +67,7 @@ const Form = (props) => {
 
     return (
         <div className="main-form">
-            <h1>Formulário do Colaborador</h1>
+            <h1 className="form-title">Formulário do Colaborador</h1>
             {showWarning && <div className="warning"><i class="bi bi-check-circle-fill check"></i>Novo card criado com sucesso!</div>}
             <section className="container-form">
                 <form className="form" onSubmit={onSave}>

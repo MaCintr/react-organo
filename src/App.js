@@ -3,8 +3,12 @@ import './App.css';
 import Banner from './components/Banner';
 import Form from './components/Form';
 import TeamContainer from './components/TeamContainer';
+import ThemeSelector from './components/ThemeSelector';
 
 function App() {
+
+  const [temaState, setTemaState] = useState('#a60eec')
+  const [secondTemaState, setSecondTemaState] = useState('#7803ad')
 
   const [colaboradores, setColaboradores] = useState([])
 
@@ -12,6 +16,11 @@ function App() {
     console.log(colaborador)
     setColaboradores([...colaboradores, colaborador])
 
+  }
+
+  const alterarContextoGlobal = (mainColor, secondColor) => {
+    setTemaState(mainColor)
+    setSecondTemaState(secondColor)
   }
 
   const times = [
@@ -48,10 +57,13 @@ function App() {
   return (
     <div className='main'>
       <Banner />
+      <ThemeSelector alterarContextoGlobal={alterarContextoGlobal}/>
       <Form times={times.map(time => time.nome)} onSubmitedColaborator={colaborador => onNewColaborator(colaborador)} />
       <h1 className='org'>Minha Organização</h1>
       {times.map(time =>
         <TeamContainer
+          temaState={temaState}
+          secondTemaState={secondTemaState}
           key={time.nome}
           nome={time.nome}
           icon={time.svg}
