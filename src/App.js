@@ -18,7 +18,10 @@ function App() {
   }
 
   const onDeleteColaborator = (nomeColaborador) => {
+    var confirmation = window.confirm(`Quer mesmo deletar o card de ${nomeColaborador}?`)
+    if (confirmation) {
     setColaboradores(colaboradores.filter(colaborador => colaborador.nome !== nomeColaborador))
+    }
   }
 
   const alterarContextoGlobal = (mainColor, secondColor) => {
