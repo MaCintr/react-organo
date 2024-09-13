@@ -1,6 +1,7 @@
 import Colaborator from "../Colaborator"
 import "./TeamContainer.css"
 import temaState from "../ThemeSelector"
+import secondTemaState from "../ThemeSelector"
 
 const TeamContainer = (props) => {
 
@@ -9,7 +10,12 @@ const TeamContainer = (props) => {
     }
 
     return (
-        props.colaboradores.length > 0 && <section className="container-team">
+        props.colaboradores.length > 0 && <section className="container-team"
+        style={{
+            backgroundColor: temaState,
+            border: secondTemaState
+        }}
+        >
             <div className="nome-time">
                 <i class={props.icon}></i><h1>{props.nome}</h1>
             </div>

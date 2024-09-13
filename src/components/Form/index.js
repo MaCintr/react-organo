@@ -74,7 +74,7 @@ const Form = (props) => {
                     <h2>Preencha os dados para criar o Card do Colaborador:</h2>
                     <Input label="Nome" valor={nome} onChangeValue={valor => setNome(valor)} />
                     <Input label="Cargo" valor={cargo} onChangeValue={valor => setCargo(valor)} />
-                    <Input label="Imagem (Cole o endereço da imagem)" valor={img} onChangeValue={valor => setImg(valor)} />
+                    <Input label="Username do Github" valor={img} onChangeValue={valor => setImg(valor)} />
                     <Options label="Time" valor={time} onChangeValue={valor => setTime(valor)} itens={props.times} />
                     <SelectColor colors={colorOptions} valor={cor} onChangeValue={valor => setCor(valor)} />
                     <ButtonElement>

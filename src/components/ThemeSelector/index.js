@@ -2,10 +2,12 @@ import { useState, useEffect } from 'react'
 import './ThemeSelector.css'
 
 const ThemeSelector = () => {
-    const [temaState, setTemaState] = useState('roxo')
+    const [temaState, setTemaState] = useState('#a60eec')
+    const [secondTemaState, setSecondTemaState] = useState('#a60eec')
 
     const alterarContexto = (tema, mainColor, secondColor) => {
-        setTemaState(tema)
+        setTemaState(mainColor)
+        setSecondTemaState(secondColor)
         const banner = document.getElementById('banner')
         const bannerHeader = document.querySelector('.banner')
         const form = document.querySelector('.container-form')
@@ -54,7 +56,7 @@ const ThemeSelector = () => {
                     style={{
                         width: '30px',
                         height: '30px',
-                        backgroundColor: tema.cor,
+                        backgroundColor: tema.mainColor,
                         cursor: 'pointer',
                         border: 'none',
                         borderRadius: '5px',
