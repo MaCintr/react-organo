@@ -37,7 +37,7 @@ const ThemeSelector = ({ alterarContextoGlobal }) => {
         { tema: 'roxo', cor: '#a60eec', mainColor: '#a60eec', secondColor: '#7803ad' },
         { tema: 'azul', cor: '#33fff7', mainColor: '#0cc0df', secondColor: '#0097b2' },
         { tema: 'verde', cor: '#33ff57', mainColor: '#7ed957', secondColor: '#00bf63' },
-        { tema: 'vermelho', cor: '#FF0000', mainColor: '#ff3131', secondColor: '#d63642' },
+        { tema: 'vermelho', cor: '#FF0000', mainColor: '#fd5a5b', secondColor: '#ff383b' },
         { tema: 'laranja', cor: '#ffa500', mainColor: '#ff914d', secondColor: '#d24401' },
         { tema: 'claro', cor: '#f5f5f5', mainColor: '#bfbfbf', secondColor: '#616161' },
     ]

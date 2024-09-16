@@ -12,8 +12,13 @@ const TeamContainer = ({ temaState, secondTemaState, colaboradores, nome, icon, 
         }}
       >
         <div className="nome-time">
-          <i className={icon}></i>
-          <h1>{nome}</h1>
+          <i className={icon}
+            style={{
+              color: temaState === '#bfbfbf' ? '#545454' : 'white'
+            }}></i>
+          <h1 style={{
+            color: temaState === '#bfbfbf' ? '#545454' : 'white'
+          }}>{nome}</h1>
         </div>
         <div className="colab-list">
           {colaboradores.map((colaborador) => (
