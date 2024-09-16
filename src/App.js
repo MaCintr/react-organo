@@ -4,6 +4,7 @@ import Banner from './components/Banner';
 import Form from './components/Form';
 import TeamContainer from './components/TeamContainer';
 import ThemeSelector from './components/ThemeSelector';
+import FooterComponent from './components/FooterComponent';
 
 function App() {
 
@@ -78,6 +79,7 @@ function App() {
           )}
           onDeleteColaborator={onDeleteColaborator}
         />)}
+        <FooterComponent temaState={temaState} secondTemaState={secondTemaState}/>
     </div>
   );
 }
