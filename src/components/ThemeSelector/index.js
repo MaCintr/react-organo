@@ -43,7 +43,7 @@ const ThemeSelector = ({ alterarContextoGlobal }) => {
     ]
 
     useEffect(() => {
-        alterarContexto('roxo', '#a60eec', '#a60eec')
+        alterarContexto('roxo', '#a60eec', '#7803ad')
     }, [])
 
     return (
