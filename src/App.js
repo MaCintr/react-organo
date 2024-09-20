@@ -21,7 +21,7 @@ function App() {
   const onDeleteColaborator = (nomeColaborador) => {
     var confirmation = window.confirm(`Quer mesmo deletar o card de ${nomeColaborador}?`)
     if (confirmation) {
-    setColaboradores(colaboradores.filter(colaborador => colaborador.nome !== nomeColaborador))
+      setColaboradores(colaboradores.filter(colaborador => colaborador.nome !== nomeColaborador))
     }
   }
 
@@ -64,22 +64,29 @@ function App() {
   return (
     <div className='main'>
       <Banner />
-      <ThemeSelector alterarContextoGlobal={alterarContextoGlobal}/>
+      <ThemeSelector alterarContextoGlobal={alterarContextoGlobal} />
       <Form temaState={temaState} times={times.map(time => time.nome)} onSubmitedColaborator={colaborador => onNewColaborator(colaborador)} />
       <h1 className='org'>Minha Organização</h1>
-      {times.map(time =>
-        <TeamContainer
-          temaState={temaState}
-          secondTemaState={secondTemaState}
-          key={time.nome}
-          nome={time.nome}
-          icon={time.svg}
-          colaboradores={colaboradores.filter(colaborador =>
-            colaborador.time === time.nome
-          )}
-          onDeleteColaborator={onDeleteColaborator}
-        />)}
-        <FooterComponent temaState={temaState} secondTemaState={secondTemaState}/>
+      {colaboradores.length === 0 ? (
+        <div className='empty-div' style={{ color: temaState === '#bfbfbf' ? '#545454' : 'white' }}>
+          <h3>Os colaboradores adicionados aparecerão aqui...</h3>
+        </div>
+      ) : (
+        times.map(time =>
+          <TeamContainer
+            temaState={temaState}
+            secondTemaState={secondTemaState}
+            key={time.nome}
+            nome={time.nome}
+            icon={time.svg}
+            colaboradores={colaboradores.filter(colaborador =>
+              colaborador.time === time.nome
+            )}
+            onDeleteColaborator={onDeleteColaborator}
+          />
+        )
+      )}
+      <FooterComponent temaState={temaState} secondTemaState={secondTemaState} />
     </div>
   );
 }

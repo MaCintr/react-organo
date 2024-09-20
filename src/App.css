@@ -9,3 +9,15 @@ h1 {
 .main {
     text-align: center;
 }
+
+.empty-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.empty-div h3 {
+    transform: translateY(-30px);
+    font-weight: 400;
+}
